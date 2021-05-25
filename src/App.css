@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Pacifico:regular,bold,italic&subset=latin,latin-ext');
+
+body {
+  font-family: 'Lato';
+}
+
+main {
+  display: flex;
+  width: 100%;
+}
+
+.App {
+  width: 100%;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  max-width: 1440px;
+  margin: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width: 100%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,57 @@
+.sliderWrap{
+  background: #fff;
+  position: relative;
+
+  .gatsby-image-wrapper{
+    @media (max-width: 1024px) {
+      height: 450px;
+    }
+  }
+  .sliderContent{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(10%, -50%);
+  }
+
+  .slick-prev, .slick-next{
+    z-index: 1;
+    &:before{
+      font-family: 'fontello';
+      font-weight: 900;
+      font-size: 26px;
+    }
+  }
+  .slick-prev{
+    left: 1rem;
+    &:before{
+      content: "\E80D";
+    }
+  }
+  .slick-next{
+    right: 1rem;
+    &:before{
+      content: "\E80E";
+    }
+  }
+  .slickDots{
+    position: absolute;
+    bottom: 1.5rem;
+    button{
+      &:before{
+        color: #FFF;
+        font-size: 14px;
+      }
+    }
+    .slick-active{
+      button{
+        &:before{
+          color: #FFF;
+        }
+      }
+    }
+  }
+  .overlay{
+    height: 99%;
+  }
+}

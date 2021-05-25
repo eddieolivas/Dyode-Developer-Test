@@ -1,0 +1,38 @@
+.sliderWrap{
+  background: #fff;
+  position: relative;
+
+  .sliderContent{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(10%, -50%);
+  }
+
+  .title h1 {
+    color: #10504F;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .slick-dots {
+    bottom: 20px !important;
+  }
+  
+  .slick-dots li {
+    margin-right: 0.95em;
+  }
+  
+  .slick-dots li button:before {
+    color: #fff !important;
+    font-size: 20px !important;
+    opacity: 0.6 !important;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #fff !important;
+    opacity: 1 !important;
+  }
+}

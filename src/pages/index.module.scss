@@ -1,0 +1,31 @@
+.slider-wrap {
+  height: 99%;
+}
+
+.slide {
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  max-height: 638px;
+  height: 53vh;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.slide1 {
+  background-image: url(../assets/images/hero-slide-1.svg);
+}
+
+.slide2 {
+  background-image: url(../assets/images/hero-slide-2.svg);
+}
+
+.slide3 {
+  background-image: url(../assets/images/hero-slide-3.svg);
+}
+
+.title h1 {
+  font-family: 'Pacifico', sans-serif;
+}
