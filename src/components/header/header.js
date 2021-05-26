@@ -6,8 +6,10 @@ import classes from './header.module.scss';
 const Header = () => {
   return (
     <header className={classes.header}>
-      <div className={`${classes.announcements} container`}>
-        Free Shipping on All Orders Over $75
+      <div className={classes.announcements}>
+        <div className="container">
+          Free Shipping on All Orders Over $75
+        </div>
       </div>
       <div className={classes.mainHeader}>
         <div className={classes.container}>

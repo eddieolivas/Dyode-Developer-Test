@@ -16,9 +16,7 @@ const Slider = ({ children }) => {
     fade: true,
     cssEase: 'linear',
     dots: true,
-    arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 3
+    arrows: false
   }
 
   return(
