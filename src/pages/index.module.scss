@@ -97,5 +97,26 @@
 .favTees {
   background: url('../assets/images/fave-tees.svg');
   background-size: cover;
+  color: #fff;
   min-height: 40vh;
+}
+
+.insta {
+  padding: 4rem;
+
+  h2 {
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .instaPhoto {
+    margin-right: 1rem;
+  }
+}
+
+.signUp {
+  background: #10504F;
+  color: #fff;
+  padding: 3rem;
 }

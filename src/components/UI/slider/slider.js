@@ -6,16 +6,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './slider.scss';
 
-const NextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className="nextArrow"
-      style={{background: "red"}}
-    />
-  );
-};
-
 const Slider = ({ children }) => {
 
   let settings = {

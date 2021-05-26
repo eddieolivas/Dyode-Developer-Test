@@ -1,27 +1,33 @@
-import { Link } from 'react-router-dom';
-import logo from '../logo.svg';
+// import { Link } from 'react-router-dom';
+// import logo from '../logo.svg';
 import '../App.css';
 import classes from './index.module.scss';
 import Slider from '../components/UI/slider/slider';
-import Slide from '../components/UI/slider/slide';
+// import Slide from '../components/UI/slider/slide';
 import Button from '../components/UI/button/button';
 import womens from '../assets/images/womens.svg';
 import mens from '../assets/images/mens.svg';
 import accessories from '../assets/images/accessories.svg';
 import productImage from '../assets/images/product-image.svg';
+import insta1 from '../assets/images/social-1.svg';
+import insta2 from '../assets/images/social-2.svg';
+import insta3 from '../assets/images/social-3.svg';
+import insta4 from '../assets/images/social-4.svg';
+import insta5 from '../assets/images/social-5.svg';
+import email from '../assets/images/email-icon.svg';
 
 import SlickSlider from 'react-slick';
 
 const IndexPage = () => {
-  const NextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ background: "blue", zIndex: "1", right: "0"}}
-      />
-    );
-  };
+  // const NextArrow = (props) => {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{ background: "blue", zIndex: "1", right: "0"}}
+  //     />
+  //   );
+  // };
 
   const settings = {
     autoplay: false,
@@ -32,7 +38,7 @@ const IndexPage = () => {
     arrows: true,
     slidesToShow: 4,
     slidesToScroll: 4,
-    nextArrow: <NextArrow className="nextArrow" style={{display: "block"}}/>
+    // nextArrow: <NextArrow className="nextArrow" style={{display: "block"}}/>
   }
 
   return (
@@ -157,8 +163,35 @@ const IndexPage = () => {
       </div>
 
       <div className={classes.favTees}>
-        <h2>Our Favorite Tees</h2>
-        <Button btnType="green">Shop Now</Button>
+        <div className={classes.favTeesP}>
+          <h2>Our Favorite Tees</h2>
+          <p>Everyday tees you need.</p>
+          <p style={{textAlign: "center"}}><Button btnType="green">Shop Now</Button></p>
+        </div>
+      </div>
+
+      <div className={classes.insta}>
+        <h2>Follow Us On Instagram</h2>
+        <div className={classes.instaPhotos}>
+          <img alt="insta post 1" className={classes.instaPhoto} src={insta1} />
+          <img alt="insta post 2" className={classes.instaPhoto} src={insta2} />
+          <img alt="insta post 3" className={classes.instaPhoto} src={insta3} />
+          <img alt="insta post 4" className={classes.instaPhoto} src={insta4} />
+          <img alt="insta post 5" className={classes.instaPhoto} src={insta5} />
+        </div>
+      </div>
+
+      <div className={classes.signUp}>
+        <img alt="Email icon" src={email} /> <h2>Sign Up & Stay Connected</h2>
+        <div className={classes.signUpCopy}>
+        Sign up for the newsletter and get 20% off! Gain access to exclusive offers and be the first to know when new stuff drops!
+        </div>
+        <div className={classes.signUpForm}>
+          <form>
+            <input type="text"></input>
+            <input type="submit" value="Subscribe" />
+          </form>
+        </div>
       </div>
     </div>
   );
