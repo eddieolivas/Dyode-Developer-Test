@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:regular,bold,italic&subset=latin,latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Pacifico:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico:regular,bold,light,italic&subset=latin,latin-ext');
 
 body, button {
   font-family: 'Lato';
@@ -34,7 +34,27 @@ main {
 
 .slick-prev {
   background-image: url('./assets/images/left-arrow.svg') !important;
-  background-color: #000 !important;
-  left: 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  height: 42px !important;
+  width: 23px !important;
   z-index: 1;
-}  
+}
+
+.slick-next {
+  /* background-color: #000 !important; */
+  background-image: url('./assets/images/right-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  height: 42px !important;
+  width: 23px !important;
+  z-index: 1;
+}
+
+.slick-next:before, .slick-prev:before {
+  content: '' !important;
+}
+
+.slick-slide img {
+  margin: auto;
+}

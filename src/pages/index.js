@@ -34,10 +34,11 @@ const IndexPage = () => {
     autoplaySpeed: 4000,
     speed: 700,
     cssEase: 'linear',
-    dots: true,
+    dots: false,
+    infinite: true,
     arrows: true,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     // nextArrow: <NextArrow className="nextArrow" style={{display: "block"}}/>
   }
 
@@ -113,64 +114,66 @@ const IndexPage = () => {
         <SlickSlider {...settings}>
           <div>
             <img alt="product 1" src={productImage} />
-            <span>Product Title</span>
-            <span>WOMEN'S T-SHIRT</span>
-            <span>$19.99</span>
+            <p className={classes.productTitle}>Product Title</p>
+            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
+            <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
             <img alt="product 2" src={productImage} />
-            <span>Product Title</span>
-            <span>WOMEN'S T-SHIRT</span>
-            <span>$19.99</span>
+            <p className={classes.productTitle}>Product Title</p>
+            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
+            <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
             <img alt="product 3" src={productImage} />
-            <span>Product Title</span>
-            <span>WOMEN'S T-SHIRT</span>
-            <span>$19.99</span>
+            <p className={classes.productTitle}>Product Title</p>
+            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
+            <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
             <img alt="product 4" src={productImage} />
-            <span>Product Title</span>
-            <span>WOMEN'S T-SHIRT</span>
-            <span>$19.99</span>
+            <p className={classes.productTitle}>Product Title</p>
+            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
+            <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
             <img alt="product 5" src={productImage} />
-            <span>Product Title</span>
-            <span>WOMEN'S T-SHIRT</span>
-            <span>$19.99</span>
+            <p className={classes.productTitle}>Product Title</p>
+            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
+            <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
             <img alt="product 6" src={productImage} />
-            <span>Product Title</span>
-            <span>WOMEN'S T-SHIRT</span>
-            <span>$19.99</span>
+            <p className={classes.productTitle}>Product Title</p>
+            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
+            <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
             <img alt="product 7" src={productImage} />
-            <span>Product Title</span>
-            <span>WOMEN'S T-SHIRT</span>
-            <span>$19.99</span>
+            <p className={classes.productTitle}>Product Title</p>
+            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
+            <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
             <img alt="product 8" src={productImage} />
-            <span>Product Title</span>
-            <span>WOMEN'S T-SHIRT</span>
-            <span>$19.99</span>
+            <p className={classes.productTitle}>Product Title</p>
+            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
+            <p className={classes.productPrice}>$19.99</p>
           </div>
         </SlickSlider>
       </div>
 
       <div className={classes.favTees}>
-        <div className={classes.favTeesP}>
-          <h2>Our Favorite Tees</h2>
-          <p>Everyday tees you need.</p>
-          <p style={{textAlign: "center"}}><Button btnType="green">Shop Now</Button></p>
+        <div className={classes.container}>
+          <div className={classes.favTeesContent}>
+            <h2>Our Favorite Tees</h2>
+            <p>Everyday tees you need.</p>
+            <p style={{textAlign: "left"}}><Button btnType="green">Shop Now</Button></p>
+          </div>
         </div>
       </div>
 
-      <div className={classes.insta}>
+      <div className={classes.followUs}>
         <h2>Follow Us On Instagram</h2>
         <div className={classes.instaPhotos}>
           <img alt="insta post 1" className={classes.instaPhoto} src={insta1} />
@@ -182,14 +185,14 @@ const IndexPage = () => {
       </div>
 
       <div className={classes.signUp}>
-        <img alt="Email icon" src={email} /> <h2>Sign Up & Stay Connected</h2>
+        <h2 className={classes.signUpHeading}><img className={classes.emailIcon} alt="Email icon" src={email} />  Sign Up & Stay Connected</h2>
         <div className={classes.signUpCopy}>
         Sign up for the newsletter and get 20% off! Gain access to exclusive offers and be the first to know when new stuff drops!
         </div>
         <div className={classes.signUpForm}>
           <form>
-            <input type="text"></input>
-            <input type="submit" value="Subscribe" />
+            <input className={classes.input} type="text" placeholder="Enter Your Email Address"></input>
+            <input className={classes.submit} type="submit" value="Subscribe" />
           </form>
         </div>
       </div>
