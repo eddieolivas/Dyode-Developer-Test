@@ -1,0 +1,30 @@
+.button {
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 14px 20px;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.black {
+  background-color: #000;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.green {
+  background-color: #10504F;
+
+  &:hover {
+    background-color: #fff;
+    color: #10504F;
+  }
+}

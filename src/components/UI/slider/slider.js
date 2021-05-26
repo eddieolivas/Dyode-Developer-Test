@@ -6,27 +6,39 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './slider.scss';
 
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className="nextArrow"
+      style={{background: "red"}}
+    />
+  );
+};
 
-
-const Slider = ({ children, title, caption, className })=>{
+const Slider = ({ children }) => {
 
   let settings = {
+    autoplay: false,
+    autoplaySpeed: 4000,
     infinite: true,
-    speed: 500,
-    fade: false,
+    speed: 700,
+    fade: true,
     cssEase: 'linear',
     dots: true,
     arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3
   }
 
   return(
-    <div className={`sliderWrap ${className}`}>
+    <div className={`sliderWrap`}>
       <SlickSlider {...settings}>
         {children}
       </SlickSlider>
     </div>
   )
-}
+};
 
 
 Slider.propTypes = {

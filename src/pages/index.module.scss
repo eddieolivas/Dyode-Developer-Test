@@ -1,31 +1,101 @@
-.slider-wrap {
-  height: 99%;
+.hero {
+  .slider-wrap {
+    height: 99%;
+  }
+  
+  .slide {
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex !important;
+    flex-direction: column;
+    max-height: 638px;
+    height: 53vh;
+    justify-content: center;
+    width: 50%;
+
+    .sliderContent {
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
+      width: 50%;
+
+      .description {
+        margin: 0.8rem 0;
+      }
+
+      button {
+        align-self: flex-start;
+      }
+    }
+  }
+  
+  .slide1 {
+    background-image: url(../assets/images/hero-slide-1.svg);
+    color: #10504F;
+  }
+  
+  .slide2 {
+    background-image: url(../assets/images/hero-slide-2.svg);
+    color: #fff;
+  }
+  
+  .slide3 {
+    background-image: url(../assets/images/hero-slide-3.svg);
+    color: #fff;
+  }
+  
+  .heading {
+    h1 {
+      font-size: 60px;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  .content {
+    font-size: 26px;
+    text-align: left;
+  }
 }
 
-.slide {
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
+.categories {
   display: flex;
-  flex-direction: column;
-  max-height: 638px;
-  height: 53vh;
-  justify-content: space-between;
-  width: 50%;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 2rem;
+
+  .categoryCard {
+    background: #10504F;
+    margin-right: 20px;
+    max-width: 435px;
+    width: 100%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .categoryTitle {
+      color: #fff;
+      font-family: 'Pacifico', sans-serif;
+      font-size: 40px;
+      padding: 1.3rem 0;
+      text-align: center;
+    }
+  }
 }
 
-.slide1 {
-  background-image: url(../assets/images/hero-slide-1.svg);
+.newArrivals {
+  padding: 2rem;
+
+  h2 {
+    font-size: 60px;
+    font-weight: 400;
+  }
 }
 
-.slide2 {
-  background-image: url(../assets/images/hero-slide-2.svg);
-}
-
-.slide3 {
-  background-image: url(../assets/images/hero-slide-3.svg);
-}
-
-.title h1 {
-  font-family: 'Pacifico', sans-serif;
+.favTees {
+  background: url('../assets/images/fave-tees.svg');
+  background-size: cover;
+  min-height: 40vh;
 }
