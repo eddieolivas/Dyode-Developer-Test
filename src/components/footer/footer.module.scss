@@ -4,11 +4,34 @@
   padding: 2rem;
   width: 100%;
 
-  .social {
-    margin-right: 1rem;
+  .footerHeading {
+    font-size: 22px;
+    margin-bottom: 0.9rem;
+  }
 
-    &:last-child {
-      margin: 0;
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-size: 18px;
+      margin-bottom: 0.9rem;;
+    }
+  }
+
+  .company {
+    margin-left: 5.75rem;
+  }
+
+  .followUs {
+    margin-left: auto;
+
+    .social {
+      margin-right: 2.9rem;
+  
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }

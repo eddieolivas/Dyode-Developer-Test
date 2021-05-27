@@ -5,7 +5,7 @@
   
   .slide {
     background-size: cover;
-    background-position: right;
+    background-position: top right;
     background-repeat: no-repeat;
     display: flex !important;
     flex-direction: column;
@@ -26,6 +26,8 @@
 
       button {
         align-self: flex-start;
+        position: relative;
+        z-index: 1;
       }
     }
   }
@@ -62,25 +64,35 @@
 .categories {
   display: flex;
   flex-flow: row wrap;
+  flex: 1 0 26%;
   justify-content: center;
   padding: 2rem;
 
   .categoryCard {
     background: #10504F;
     margin-right: 20px;
+    flex-basis: 30%;
     max-width: 435px;
-    width: 100%;
+    // width: 100%;
 
     &:last-child {
       margin-right: 0;
     }
 
+    img {
+      width: 100%;
+    }
+
     .categoryTitle {
-      color: #fff;
-      font-family: 'Pacifico', sans-serif;
-      font-size: 40px;
       padding: 1.3rem 0;
-      text-align: center;
+
+      a {
+        color: #fff;
+        font-family: 'Pacifico', sans-serif;
+        font-size: 40px;
+        text-align: center;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -88,14 +100,27 @@
 .newArrivals {
   padding: 4rem;
 
+  .slick-slider button {
+    position: absolute;
+  }
+
   h2 {
     font-size: 60px;
     font-weight: 400;
   }
 
   .productTitle {
-    font-size: 22px;
-    margin: 1rem 0rem 0.45rem;;
+
+    a {
+      color: #000;
+      font-size: 22px;
+      margin: 1rem 0rem 0.45rem;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .productCat {
@@ -152,6 +177,8 @@
 }
 
 .followUs {
+  display: flex;
+  flex-flow: column wrap;
   padding: 4rem;
 
   h2 {
@@ -160,8 +187,24 @@
     margin: 0 0 1.5rem 0;
   }
 
-  .instaPhoto {
-    margin: 0.8rem;
+  .instaPhotos {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0;
+    flex-basis: 20%;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+
+    .instaPhoto {
+      flex-basis: 17%;
+      margin: 0.8rem;
+      max-width: 248px;
+
+      img {
+        width: 100%;;
+      }
+    }
   }
 }
 
@@ -173,59 +216,71 @@
   justify-content: center;
   padding: 6rem;
 
-  .emailIcon {
-    display: inline;
-  }
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 1440px;
+    margin: auto;
 
-  .signUpHeading {
-    font-size: 40px;
-    margin-top: 0;
-    width: 100%;
-  }
+    .emailIcon {
+      display: inline;
+    }
+  
+    .signUpHeading {
+      font-size: 40px;
+      margin-top: 0;
+      width: 100%;
+    }
 
-  .signUpCopy {
-    font-size: 22px;
-    text-align: left;
-    width: 50%;
-  }
-
-  .signUpForm {
-    width: 50%;
-
-    form {
+    .sideBySide {
       display: flex;
 
-      .input {
-        height: 38px;
-        border-radius: 0;
-        border: none;
-        font-family: 'Lato', sans-serif;
+      .signUpCopy {
         font-size: 22px;
-        margin-right: 13px;
-        padding: 0.5rem;
-        width: 490px;
-  
-        &::placeholder {
-          color: #c6c6c6;
-          font-family: 'Lato', sans-serif;
-          font-size: 22px;
-          line-height: 22px;
+        margin-right: 1rem;
+        text-align: left;
+        width: 50%;
+      }
+    
+      .signUpForm {
+        width: 50%;
+    
+        form {
+          display: flex;
+    
+          .input {
+            height: 38px;
+            border-radius: 0;
+            border: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 22px;
+            margin-right: 13px;
+            padding: 0.5rem;
+            width: 490px;
+      
+            &::placeholder {
+              color: #c6c6c6;
+              font-family: 'Lato', sans-serif;
+              font-size: 22px;
+              line-height: 22px;
+            }
+          }
+      
+          .submit {
+            background:#10504F;
+            border: 1px solid #fff;
+            border-radius: 0;
+            color: #fff;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            height: 54px;
+            padding: 0.4rem;
+            text-transform: uppercase;
+            width: 140px;
+          } 
         }
       }
-  
-      .submit {
-        background:#10504F;
-        border: 1px solid #fff;
-        border-radius: 0;
-        color: #fff;
-        font-family: 'Lato', sans-serif;
-        font-size: 14px;
-        font-weight: bold;
-        height: 54px;
-        padding: 0.4rem;
-        text-transform: uppercase;
-        width: 140px;
-      } 
     }
   }
 }

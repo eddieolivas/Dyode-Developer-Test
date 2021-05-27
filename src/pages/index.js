@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import logo from '../logo.svg';
 import '../App.css';
 import classes from './index.module.scss';
@@ -24,7 +24,8 @@ const IndexPage = () => {
   //   return (
   //     <div
   //       className={className}
-  //       style={{ background: "blue", zIndex: "1", right: "0"}}
+  //       style={{ ...style, background: "blue", zIndex: "1", right: "0"}}
+  //       onClick={() => this.slider.slickNext() }
   //     />
   //   );
   // };
@@ -39,7 +40,7 @@ const IndexPage = () => {
     arrows: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // nextArrow: <NextArrow className="nextArrow" style={{display: "block"}}/>
+    // nextArrow: <NextArrow className="nextArrow" style={{display: "block"}} />
   }
 
   return (
@@ -90,21 +91,21 @@ const IndexPage = () => {
 
       <div className={classes.categories}>
         <div className={classes.categoryCard}>
-          <img alt="womens" src={womens} />
+          <Link to="/"><img alt="womens" src={womens} /></Link>
           <div className={classes.categoryTitle}>
-            Women's
+          <Link to="/">Women's</Link>
           </div>
         </div>
         <div className={classes.categoryCard}>
-          <img alt="mens" src={mens} />
+          <Link to="/"><img alt="mens" src={mens} /></Link>
           <div className={classes.categoryTitle}>
-            Women's
+          <Link to="/">Men's</Link>
           </div>
         </div>
         <div className={classes.categoryCard}>
-          <img alt="accessories" src={accessories} />
+          <Link to="/"><img alt="accessories" src={accessories} /></Link>
           <div className={classes.categoryTitle}>
-            Accessories
+          <Link to="/">Accessories</Link>
           </div>
         </div>
       </div>
@@ -113,50 +114,50 @@ const IndexPage = () => {
         <h2>New Arrivals</h2>
         <SlickSlider {...settings}>
           <div>
-            <img alt="product 1" src={productImage} />
-            <p className={classes.productTitle}>Product Title</p>
+            <Link to="/"><img alt="product 1" src={productImage} /></Link>
+            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
             <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
             <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
-            <img alt="product 2" src={productImage} />
-            <p className={classes.productTitle}>Product Title</p>
+            <Link to="/"><img alt="product 2" src={productImage} /></Link>
+            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
             <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
             <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
-            <img alt="product 3" src={productImage} />
-            <p className={classes.productTitle}>Product Title</p>
+            <Link to="/"><img alt="product 3" src={productImage} /></Link>
+            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
             <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
             <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
-            <img alt="product 4" src={productImage} />
-            <p className={classes.productTitle}>Product Title</p>
+            <Link to="/"><img alt="product 4" src={productImage} /></Link>
+            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
             <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
             <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
-            <img alt="product 5" src={productImage} />
-            <p className={classes.productTitle}>Product Title</p>
+            <Link to="/"><img alt="product 5" src={productImage} /></Link>
+            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
             <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
             <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
-            <img alt="product 6" src={productImage} />
-            <p className={classes.productTitle}>Product Title</p>
+            <Link to="/"><img alt="product 6" src={productImage} /></Link>
+            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
             <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
             <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
-            <img alt="product 7" src={productImage} />
-            <p className={classes.productTitle}>Product Title</p>
+            <Link to="/"><img alt="product 7" src={productImage} /></Link>
+            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
             <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
             <p className={classes.productPrice}>$19.99</p>
           </div>
           <div>
-            <img alt="product 8" src={productImage} />
-            <p className={classes.productTitle}>Product Title</p>
+            <Link to="/"><img alt="product 8" src={productImage} /></Link>
+            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
             <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
             <p className={classes.productPrice}>$19.99</p>
           </div>
@@ -176,24 +177,28 @@ const IndexPage = () => {
       <div className={classes.followUs}>
         <h2>Follow Us On Instagram</h2>
         <div className={classes.instaPhotos}>
-          <img alt="insta post 1" className={classes.instaPhoto} src={insta1} />
-          <img alt="insta post 2" className={classes.instaPhoto} src={insta2} />
-          <img alt="insta post 3" className={classes.instaPhoto} src={insta3} />
-          <img alt="insta post 4" className={classes.instaPhoto} src={insta4} />
-          <img alt="insta post 5" className={classes.instaPhoto} src={insta5} />
+          <Link className={classes.instaPhoto} to="/"><img alt="insta post 1" src={insta1} /></Link>
+          <Link className={classes.instaPhoto} to="/"><img alt="insta post 2" src={insta2} /></Link>
+          <Link className={classes.instaPhoto} to="/"><img alt="insta post 3" src={insta3} /></Link>
+          <Link className={classes.instaPhoto} to="/"><img alt="insta post 4" src={insta4} /></Link>
+          <Link className={classes.instaPhoto} to="/"><img alt="insta post 5" src={insta5} /></Link>
         </div>
       </div>
 
       <div className={classes.signUp}>
-        <h2 className={classes.signUpHeading}><img className={classes.emailIcon} alt="Email icon" src={email} />  Sign Up & Stay Connected</h2>
-        <div className={classes.signUpCopy}>
-        Sign up for the newsletter and get 20% off! Gain access to exclusive offers and be the first to know when new stuff drops!
-        </div>
-        <div className={classes.signUpForm}>
-          <form>
-            <input className={classes.input} type="text" placeholder="Enter Your Email Address"></input>
-            <input className={classes.submit} type="submit" value="Subscribe" />
-          </form>
+        <div className={classes.container}>
+          <h2 className={classes.signUpHeading}><img className={classes.emailIcon} alt="Email icon" src={email} />  Sign Up & Stay Connected</h2>
+          <div className={classes.sideBySide}>
+            <div className={classes.signUpCopy}>
+            Sign up for the newsletter and get 20% off! Gain access to exclusive offers and be the first to know when new stuff drops!
+            </div>
+            <div className={classes.signUpForm}>
+              <form>
+                <input className={classes.input} type="text" placeholder="Enter Your Email Address"></input>
+                <input className={classes.submit} type="submit" value="Subscribe" />
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

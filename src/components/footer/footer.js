@@ -8,7 +8,7 @@ const Footer = () => {
     <div className={classes.footer}>
       <div className="container">
         <div className={classes.customerService}>
-          <h4>Customer Service</h4>
+          <h4 className={classes.footerHeading}>Customer Service</h4>
           <ul>
             <li>Accessibility</li>
             <li>Contact Us</li>
@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
 
         <div className={classes.company}>
-          <h4>Company</h4>
+          <h4 className={classes.footerHeading}>Company</h4>
           <ul>
             <li>About Us</li>
             <li>Careers</li>
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         <div className={classes.followUs}>
-          <h4>Follow Us</h4>
+          <h4 className={classes.footerHeading}>Follow Us</h4>
           <img alt="Facebook logo" className={classes.social} src={fb} />
           <img alt="Instagram logo" className={classes.social} src={instagram}/>
           <img alt="Twitter logo" className={classes.social} src={twitter} />
