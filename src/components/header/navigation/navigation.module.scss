@@ -13,9 +13,10 @@ $browser-context: 16;
 }
 
 .mainNav {
-  align-self: center;
+  align-self: flex-end;
   display: flex;
-  margin-top: 2.55em;
+  height: 6em;
+  align-items: flex-end;
 
   ul {
     margin: 0;
@@ -24,16 +25,59 @@ $browser-context: 16;
     li {
       display: inline-flex;
       font-size: em(20px);
-      padding: 0 2em;
+      padding: 0 2em 1.7em 2em;
       text-align: center;
       text-transform: uppercase;
 
       a {
+        align-self: flex-end;
         color: #fff;
+        padding-bottom: 8px;
         text-decoration: none;
+      }
 
-        &:hover {
-          text-decoration: underline;
+      &:hover {
+        a {
+          padding-bottom: 6px;
+          border-bottom: 2px solid #fff;  
+        }
+
+        .subMenu {
+          display: flex;
+        } 
+      }
+
+      .subMenu {
+        background: #fff;
+        color: #000;
+        display: none;
+        left: 15%;
+        max-width: 972px;
+        position: absolute;
+        text-align: left;
+        top: 197px;
+        width: 100%;
+        z-index: 1;
+
+        .subLeft {
+          background-color: #efefef;
+          padding: 20px;
+          width: 55%;
+        }
+
+        .subRight {
+          width: 40%;
+        }
+
+        li {
+          color: #000;
+          display: inline-block;
+          padding: 0 1rem;
+          text-align: left;
+
+          a {
+            color: #000;
+          }
         }
       }
     }
