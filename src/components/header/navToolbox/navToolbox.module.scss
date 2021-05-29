@@ -1,6 +1,11 @@
 .navToolBox {
   display: flex;
-  margin-top: 3.7em;
+  margin-top: 4.5em;
+  position: relative;
+
+  @media screen and (max-width: 968px) {
+    margin: 0 0 0 auto;
+  }
 
   ul {
     margin: 0;

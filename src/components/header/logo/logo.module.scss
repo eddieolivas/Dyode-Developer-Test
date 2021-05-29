@@ -3,4 +3,16 @@
   margin: 1.82em 0;
   max-width: 93px;
   width: 100%;
+
+  @media screen and (max-width: 968px) {
+    
+    margin: 0;
+    margin-left: 20px;
+    
+
+    img {
+      height: 46px;
+      width: 55.44px;
+    }
+  }
 }

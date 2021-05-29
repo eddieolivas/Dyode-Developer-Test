@@ -17,13 +17,30 @@
     flex-flow: row wrap;
     justify-content: space-between;
 
+    @media screen and (max-width: 968px) {
+      padding: 0.48em 0;
+    }
+
     .container {
       display: flex;
       align-content: center;
-      justify-content: space-around;
+      justify-content: space-between;
       max-width: 1440px;
       margin: auto;
+      padding: 0 2em;
       width: 100%;
+
+      .hamburger {
+        display: none;
+      }
+
+      @media screen and (max-width: 968px) {
+        align-items: center;
+
+        .hamburger {
+          display: block;
+        }
+      }
     }
   }
 }

@@ -1,15 +1,11 @@
-.hero {
-  .slider-wrap {
-    height: 99%;
-  }
-  
+.hero {  
   .slide {
     background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
     display: flex !important;
     flex-direction: column;
-    max-height: 638px;
+    min-height: 638px;
     height: 53vh;
     justify-content: center;
     width: 50%;
@@ -260,7 +256,7 @@
             font-size: 22px;
             margin-right: 13px;
             padding: 0.5rem;
-            width: 490px;
+            width: 100%;
       
             &::placeholder {
               color: #c6c6c6;
