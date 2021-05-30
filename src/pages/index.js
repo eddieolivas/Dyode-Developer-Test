@@ -20,7 +20,7 @@ import email from '../assets/images/email-icon.svg';
 import SlickSlider from 'react-slick';
 
 const IndexPage = () => {
-  //Settings for the slider
+  //Settings for the New Arrivals slider
   const settings = {
     autoplay: false,
     autoplaySpeed: 4000,
@@ -31,6 +31,15 @@ const IndexPage = () => {
     arrows: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          infinite: true
+        }
+      }
+    ]
   }
 
   return (
@@ -198,14 +207,24 @@ const IndexPage = () => {
         </div>
       </div>
 
+      <div className={classes.favTeesMobile}>
+        <div className={classes.favTeesContent}>
+          <h2>Our Favorite Tees</h2>
+          <p>Everyday tees you need.</p>
+          <p style={{textAlign: "center"}}><Button btnType="black">Shop Now</Button></p>
+        </div>
+      </div>
+
       <div className={classes.followUs}>
-        <h2>Follow Us On Instagram</h2>
-        <div className={classes.instaPhotos}>
-          <Link className={classes.instaPhoto} to="/"><img alt="insta post 1" src={insta1} /></Link>
-          <Link className={classes.instaPhoto} to="/"><img alt="insta post 2" src={insta2} /></Link>
-          <Link className={classes.instaPhoto} to="/"><img alt="insta post 3" src={insta3} /></Link>
-          <Link className={classes.instaPhoto} to="/"><img alt="insta post 4" src={insta4} /></Link>
-          <Link className={classes.instaPhoto} to="/"><img alt="insta post 5" src={insta5} /></Link>
+        <div className={classes.container}>
+          <h2>Follow Us On Instagram</h2>
+          <div className={classes.instaPhotos}>
+            <Link className={classes.instaPhoto} to="/"><img alt="insta post 1" src={insta1} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="insta post 2" src={insta2} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="insta post 3" src={insta3} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="insta post 4" src={insta4} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="insta post 5" src={insta5} /></Link>
+          </div>
         </div>
       </div>
 

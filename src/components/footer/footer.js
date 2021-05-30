@@ -6,7 +6,7 @@ import twitter from '../../assets/images/twitter.svg';
 const Footer = () => {
   return (
     <div className={classes.footer}>
-      <div className="container">
+      <div className={classes.container}>
         <div className={classes.customerService}>
           <h4 className={classes.footerHeading}>Customer Service</h4>
           <ul>
