@@ -8,6 +8,7 @@ import Button from '../components/UI/button/button';
 import womens from '../assets/images/womens.svg';
 import mens from '../assets/images/mens.svg';
 import accessories from '../assets/images/accessories.svg';
+import accessoriesMobile from '../assets/images/accessories-mobile.svg';
 import productImage from '../assets/images/product-image.svg';
 import insta1 from '../assets/images/social-1.svg';
 import insta2 from '../assets/images/social-2.svg';
@@ -19,17 +20,7 @@ import email from '../assets/images/email-icon.svg';
 import SlickSlider from 'react-slick';
 
 const IndexPage = () => {
-  // const NextArrow = (props) => {
-  //   const { className, style, onClick } = props;
-  //   return (
-  //     <div
-  //       className={className}
-  //       style={{ ...style, background: "blue", zIndex: "1", right: "0"}}
-  //       onClick={() => this.slider.slickNext() }
-  //     />
-  //   );
-  // };
-
+  //Settings for the slider
   const settings = {
     autoplay: false,
     autoplaySpeed: 4000,
@@ -40,50 +31,82 @@ const IndexPage = () => {
     arrows: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // nextArrow: <NextArrow className="nextArrow" style={{display: "block"}} />
   }
 
   return (
     <div className="App">
       <div className={classes.hero}>
         <Slider>
-          <div className={`${classes.slide1} ${classes.slide}`}>
-            <div className={classes.sliderContent}>
-              <div className={classes.heading}>
-                <h1>Shop New Arrivals</h1>
+          <div className={classes.slideWrap}>
+            <div className={`${classes.slide1} ${classes.slide}`}>
+              <div className={classes.sliderContent}>
+                <div className={classes.heading}>
+                  <h1>Shop New Arrivals</h1>
+                </div>
+                <div className={classes.content}>
+                  <p className={classes.description}>Our coolest new items are waiting for you!</p>
+                  <p style={{textAlign: "left"}}>
+                    <Button btnType="black">Shop Now</Button>
+                  </p>
+                </div>
               </div>
-              <div className={classes.content}>
-              <p className={classes.description}>Our coolest new items are waiting for you!</p>
-              <p style={{textAlign: "left"}}>
+            </div>
+            <div className={classes.mobileContent}>
+              <div className={classes.heading}>
+                  <h1>Shop New Arrivals</h1>
+              </div>
+              <p className={classes.mobileDescription}>Our coolest new items are waiting for you!</p>
+              <p style={{textAlign: "center"}}>
                 <Button btnType="black">Shop Now</Button>
               </p>
-              </div>
             </div>
           </div>
-          <div className={`${classes.slide2} ${classes.slide}`}>
-            <div className={classes.sliderContent}>
-              <div className={classes.heading}>
-                <h1>Our Fave Tees</h1>
-              </div>
-              <div className={classes.content}>
-                <p className={classes.description}>Shop all of our favorites.</p>
-                <p style={{textAlign: "left"}}>
-                  <Button btnType="black">Shop Now</Button>
-                </p>
+          <div className={classes.slideWrap}>
+            <div className={`${classes.slide2} ${classes.slide}`}>
+              <div className={classes.sliderContent}>
+                <div className={classes.heading}>
+                  <h1>Our Fave Tees</h1>
+                </div>
+                <div className={classes.content}>
+                  <p className={classes.description}>Shop all of our favorites.</p>
+                  <p style={{textAlign: "left"}}>
+                    <Button btnType="black">Shop Now</Button>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className={`${classes.slide3} ${classes.slide}`}>
-            <div className={classes.sliderContent}>
+            <div className={classes.mobileContent}>
               <div className={classes.heading}>
-                <h1>Men's Tees</h1>
+                  <h1>Our Fave Tees</h1>
               </div>
-              <div className={classes.content}>
-                <p className={classes.description}>Find the perferct shirt.</p>
-                <p style={{textAlign: "left"}}>
-                  <Button btnType="black">Shop Now</Button>
-                </p>
+              <p className={classes.mobileDescription}>Shop all of our favorites</p>
+              <p style={{textAlign: "center"}}>
+                <Button btnType="black">Shop Now</Button>
+              </p>
+            </div>
+          </div>
+          <div className={classes.slideWrap}>
+            <div className={`${classes.slide3} ${classes.slide}`}>
+              <div className={classes.sliderContent}>
+                <div className={classes.heading}>
+                  <h1>Men's Tees</h1>
+                </div>
+                <div className={classes.content}>
+                  <p className={classes.description}>Find the perferct shirt.</p>
+                  <p style={{textAlign: "left"}}>
+                    <Button btnType="black">Shop Now</Button>
+                  </p>
+                </div>
               </div>
+            </div>
+            <div className={classes.mobileContent}>
+              <div className={classes.heading}>
+                  <h1>Men's Tees</h1>
+              </div>
+              <p className={classes.mobileDescription}>Find the perferct shirt.</p>
+              <p style={{textAlign: "center"}}>
+                <Button btnType="black">Shop Now</Button>
+              </p>
             </div>
           </div>
         </Slider>
@@ -103,7 +126,8 @@ const IndexPage = () => {
           </div>
         </div>
         <div className={classes.categoryCard}>
-          <Link to="/"><img alt="accessories" src={accessories} /></Link>
+          <Link className={classes.accessoriesDesktop} to="/"><img alt="accessories" src={accessories} /></Link>
+          <Link className={classes.accessoriesMobile} to="/"><img alt="accessories" src={accessoriesMobile} /></Link>
           <div className={classes.categoryTitle}>
           <Link to="/">Accessories</Link>
           </div>

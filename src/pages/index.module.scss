@@ -8,13 +8,22 @@
     min-height: 638px;
     height: 53vh;
     justify-content: center;
-    width: 50%;
+    width: 100%;
+
+    @media screen and (max-width: 979px) {
+      height: 20vh;
+      min-height: 375px;
+    }
 
     .sliderContent {
       display: flex;
       flex-flow: column wrap;
       align-content: center;
       width: 50%;
+      
+      @media screen and (max-width: 979px) {
+        display: none;
+      }
 
       .description {
         margin: 0.8rem 0;
@@ -25,6 +34,22 @@
         position: relative;
         z-index: 1;
       }
+    }
+  }
+
+  .mobileContent {
+    background: #EFEFEF;
+    color: #10504F;
+    padding: 30px;
+
+    .heading {
+      h1 {
+        font-size: 26px;
+      }
+    }
+
+    @media screen and (min-width: 980px) {
+      display: none;
     }
   }
   
@@ -41,6 +66,10 @@
   .slide3 {
     background-image: url(../assets/images/hero-slide-3.svg);
     color: #fff;
+
+    @media screen and (max-width: 980px) {
+      background-position: top center !important;
+    }
   }
   
   .heading {
@@ -64,6 +93,10 @@
   justify-content: center;
   padding: 2rem;
 
+  @media screen and (max-width: 980px) {
+    padding: 1rem;
+  }
+
   .categoryCard {
     background: #10504F;
     margin-right: 20px;
@@ -71,12 +104,41 @@
     max-width: 435px;
     // width: 100%;
 
+    @media screen and (max-width: 980px) {
+      flex-basis: 49%;
+      margin-right: 10px;
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }    
+
     &:last-child {
       margin-right: 0;
+
+      @media screen and (max-width: 980px) {
+        flex-basis: 100%;
+        margin-top: 10px;
+        max-width: 100%;
+      }
     }
 
     img {
       width: 100%;
+    }
+
+    .accessoriesDesktop {
+      @media screen and (max-width: 980px) {
+        display: none;
+      }
+    }
+
+    .accessoriesMobile {
+      display: none;
+
+      @media screen and (max-width: 980px) {
+        display: block;
+      }
     }
 
     .categoryTitle {

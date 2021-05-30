@@ -11,6 +11,10 @@
 
   .slick-dots {
     bottom: 20px !important;
+
+    @media screen and (max-width: 980px) {
+      bottom: 240px !important;
+    }
   }
   
   .slick-dots li {
