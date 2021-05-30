@@ -50,7 +50,7 @@
   }
   
   .slide1 {
-    background-image: url(../assets/images/hero-slide-1.svg);
+    background-image: url(../assets/images/hero-slide-1.jpeg);
     color: #10504F;
   }
   
@@ -60,7 +60,7 @@
   }
   
   .slide3 {
-    background-image: url(../assets/images/hero-slide-3.svg);
+    background-image: url(../assets/images/hero-slide-3.jpeg);
     color: #fff;
 
     @media screen and (max-width: 980px) {
@@ -141,19 +141,27 @@
     .categoryTitle {
       padding: 1.3rem 0;
 
+      @media screen and (max-width: 767px) {
+        padding: 0.5rem 0;
+      }
+
       a {
         color: #fff;
         font-family: 'Pacifico', sans-serif;
         font-size: 40px;
         text-align: center;
         text-decoration: none;
+
+        @media screen and (max-width: 767px) {
+          font-size: 26px;
+        }
       }
     }
   }
 }
 
 .newArrivals {
-  padding: 4rem;
+  padding: 4rem 2rem;
 
   .slick-slider button {
     position: absolute;
@@ -162,6 +170,10 @@
   h2 {
     font-size: 60px;
     font-weight: 400;
+
+    @media screen and (max-width: 767px) {
+      font-size: 26px;
+    }
   }
 
   img {
@@ -196,7 +208,7 @@
 }
 
 .favTees {
-  background: url('../assets/images/fave-tees.svg');
+  background: url('../assets/images/fave-tees.jpeg');
   background-size: cover;
   color: #fff;
   display: flex;
@@ -209,11 +221,7 @@
   }
 
   @media screen and (max-width: 800px) {
-    min-height: 25vh;
-  }
-
-  @media screen and (max-width: 600px) {
-    min-height: 20vh;
+    min-height: 30vh;
   }
 
   .container {
@@ -256,7 +264,7 @@
   color: #10504F;
   display: none;
   justify-content: center;
-  padding: 4em 0;
+  padding: 2em 0;
   text-align: center;
 
   @media screen and (max-width: 800px) {
@@ -264,13 +272,13 @@
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 26px;
     font-weight: 400;
     margin: 0;
   }
 
   p {
-    font-size: 26px;
+    font-size: 14px;
     margin: 0 0 1.5em;
   }
 
@@ -279,7 +287,7 @@
 .followUs {
   display: flex;
   flex-flow: column wrap;
-  padding: 4rem;
+  padding: 4rem 2rem;
 
   .container {
     display: flex;
@@ -292,6 +300,10 @@
       font-size: 60px;
       font-weight: 400;
       margin: 0 0 1.5rem 0;
+
+      @media screen and (max-width: 767px) {
+        font-size: 26px;
+      }
     }
   
     .instaPhotos {
@@ -352,8 +364,13 @@
   
     .signUpHeading {
       font-size: 40px;
+      font-weight: 400;
       margin-top: 0;
       width: 100%;
+
+      @media screen and (max-width: 767px) {
+        font-size: 26px;
+      }
     }
 
     .sideBySide {
@@ -368,6 +385,10 @@
         margin-right: 1rem;
         text-align: left;
         width: 50%;
+
+        @media screen and (max-width: 767px) {
+          font-size: 14px;
+        }
       }
     
       .signUpForm {
@@ -403,6 +424,7 @@
           }
       
           .submit {
+            -webkit-appearance: none;
             background:#10504F;
             border: 1px solid #fff;
             border-radius: 0;
@@ -416,6 +438,7 @@
             width: 140px;
 
             @media screen and (max-width: 767px) {
+              border-radius: 0 !important;
               margin: auto;
             }
           } 

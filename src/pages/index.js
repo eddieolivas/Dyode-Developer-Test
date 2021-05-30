@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom';
-// import logo from '../logo.svg';
+
 import '../App.css';
 import classes from './index.module.scss';
+
 import Slider from '../components/UI/slider/slider';
-// import Slide from '../components/UI/slider/slide';
 import Button from '../components/UI/button/button';
-import womens from '../assets/images/womens.svg';
-import mens from '../assets/images/mens.svg';
-import accessories from '../assets/images/accessories.svg';
-import accessoriesMobile from '../assets/images/accessories-mobile.svg';
-import productImage from '../assets/images/product-image.svg';
-import insta1 from '../assets/images/social-1.svg';
-import insta2 from '../assets/images/social-2.svg';
-import insta3 from '../assets/images/social-3.svg';
-import insta4 from '../assets/images/social-4.svg';
-import insta5 from '../assets/images/social-5.svg';
+import womens from '../assets/images/womens.jpeg';
+import mens from '../assets/images/mens.jpeg';
+import accessories from '../assets/images/accessories.jpeg';
+import accessoriesMobile from '../assets/images/accessories-mobile.jpeg';
+import productImage from '../assets/images/product-image.jpeg';
+import insta1 from '../assets/images/social-1.jpg';
+import insta2 from '../assets/images/social-2.jpg';
+import insta3 from '../assets/images/social-3.jpg';
+import insta4 from '../assets/images/social-4.jpg';
+import insta5 from '../assets/images/social-5.jpg';
 import email from '../assets/images/email-icon.svg';
 
 import SlickSlider from 'react-slick';

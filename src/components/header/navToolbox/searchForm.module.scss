@@ -16,6 +16,10 @@
     top: 45px;
   }
 
+  @media screen and (max-width: 500px) {
+    right: 20px;
+  }
+
   @keyframes growDown {
     0% {
       transform: scaleX(0)
@@ -43,8 +47,10 @@
   }
 
   .searchBtn {
+    -webkit-appearance: none;
     background: #000;
     border: 1px solid #000;
+    border-radius: 0;
     color: #fff;
     display: block;
     float: right;
@@ -54,6 +60,10 @@
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
     width: 56px;
+
+    @media screen and (max-width: 767px) {
+      border-bottom: 2px solid #000;
+    }
 
     &:hover {
       background: #fff;
