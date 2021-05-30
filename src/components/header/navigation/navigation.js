@@ -1,7 +1,7 @@
 import classes from './navigation.module.scss';
 import { Link } from 'react-router-dom';
 
-import insta1 from '../../../assets/images/social-1.svg';
+import insta1 from '../../../assets/images/social-1.jpg';
 
 const Navigation = () => {
   return (

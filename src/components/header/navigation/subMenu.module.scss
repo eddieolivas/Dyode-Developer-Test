@@ -1,0 +1,92 @@
+.subMenu {
+  animation: growDown 300ms ease-in-out forwards;
+  background: #fff;
+  color: #000;
+  display: flex;
+  left: 15%;
+  max-width: 972px;
+  position: absolute;
+  text-align: left;
+  transform-origin: top center;
+  top: 197px;
+  width: 100%;
+  z-index: 1;
+
+  @media screen and (max-width: 1200px) {
+    left: 9%;
+  }
+
+  @media screen and (max-width: 1074px) {
+    left: 2%;
+  }
+
+  @keyframes growDown {
+    0% {
+      opacity: 0;
+      transform: scaleY(0)
+    }
+    80% {
+      opacity: 0.4;
+      transform: scaleY(1.1)
+    }
+    100% {
+      opacity: 1;
+      transform: scaleY(1)
+    }
+  }
+
+  .subLeft {
+    background-color: #efefef;
+    display: flex;
+    padding: 42px;
+    width: 52%;
+
+    .subLeftL {
+      display: flex;
+      width: 60%;
+
+      img {
+        max-width: 248px;
+      }
+    }
+
+    .subLeftR {
+      padding-left: 20px;
+    }
+  }
+
+  .subRight {
+    display: flex;
+    padding: 52px 42px 0 42px;
+    width: 42%;
+
+    .subMenuHeading {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 14px;
+    }
+
+    .subRightL {
+      width: 57%;
+    }
+  }
+
+  li {
+    color: #000;
+    display: block;
+    padding: 0 1rem;
+    text-align: left;
+
+    a {
+      border: none;
+      color: #000;
+      font-size: 22px;
+      line-height: 40px;
+      text-transform: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

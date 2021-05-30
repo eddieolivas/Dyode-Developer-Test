@@ -97,6 +97,10 @@ $browser-context: 16;
           .subLeftL {
             display: flex;
             width: 60%;
+
+            img {
+              max-width: 248px;
+            }
           }
 
           .subLeftR {
