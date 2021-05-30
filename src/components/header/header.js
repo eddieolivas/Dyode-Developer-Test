@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Logo from '../header/logo/logo';
 import Navigation from './navigation/navigation';
 import NavToolbox from './navToolbox/navToolbox';
 import DrawerToggle from '../header/navigation/sideDrawer/drawerToggle/drawerToggle';
 import classes from './header.module.scss';
-
-import hamburger from '../../assets/images/hamburger-button.svg';
 
 const header = (props) => {
   return (
