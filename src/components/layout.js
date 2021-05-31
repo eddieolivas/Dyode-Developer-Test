@@ -21,7 +21,6 @@ class Layout extends Component {
   }
 
   render () {
-    console.log('layout state showSideDrawer ' + this.state.showSideDrawer)
     return (
       <div className={classes.layout}>
         <SideDrawer 

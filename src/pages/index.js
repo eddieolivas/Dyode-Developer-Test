@@ -4,23 +4,25 @@ import '../App.css';
 import classes from './index.module.scss';
 
 import Slider from '../components/UI/slider/slider';
+import HeroSlide from '../components/UI/slider/heroSlide';
+import ProductSlide from '../components/UI/slider/productSlide';
 import Button from '../components/UI/button/button';
-import womens from '../assets/images/womens.jpeg';
-import mens from '../assets/images/mens.jpeg';
-import accessories from '../assets/images/accessories.jpeg';
-import accessoriesMobile from '../assets/images/accessories-mobile.jpeg';
-import productImage from '../assets/images/product-image.jpeg';
-import insta1 from '../assets/images/social-1.jpg';
-import insta2 from '../assets/images/social-2.jpg';
-import insta3 from '../assets/images/social-3.jpg';
-import insta4 from '../assets/images/social-4.jpg';
-import insta5 from '../assets/images/social-5.jpg';
-import email from '../assets/images/email-icon.svg';
+import womens from '../assets/images/womens.webp';
+import mens from '../assets/images/mens.webp';
+import accessories from '../assets/images/accessories.webp';
+import accessoriesMobile from '../assets/images/accessories-mobile.webp';
+import productImage from '../assets/images/product-image.webp';
+import insta1 from '../assets/images/social-1.webp';
+import insta2 from '../assets/images/social-2.webp';
+import insta3 from '../assets/images/social-3.webp';
+import insta4 from '../assets/images/social-4.webp';
+import insta5 from '../assets/images/social-5.webp';
+import email from '../assets/images/email-icon.webp';
 
-import SlickSlider from 'react-slick';
+import ProductSlider from 'react-slick';
 
 const IndexPage = () => {
-  //Settings for the New Arrivals slider
+  //Settings for the New Arrivals product slider
   const settings = {
     autoplay: false,
     autoplaySpeed: 4000,
@@ -46,78 +48,21 @@ const IndexPage = () => {
     <div className="App">
       <div className={classes.hero}>
         <Slider>
-          <div className={classes.slideWrap}>
-            <div className={`${classes.slide1} ${classes.slide}`}>
-              <div className={classes.sliderContent}>
-                <div className={classes.heading}>
-                  <h1>Shop New Arrivals</h1>
-                </div>
-                <div className={classes.content}>
-                  <p className={classes.description}>Our coolest new items are waiting for you!</p>
-                  <p style={{textAlign: "left"}}>
-                    <Button btnType="black">Shop Now</Button>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className={classes.mobileContent}>
-              <div className={classes.heading}>
-                  <h1>Shop New Arrivals</h1>
-              </div>
-              <p className={classes.mobileDescription}>Our coolest new items are waiting for you!</p>
-              <p style={{textAlign: "center"}}>
-                <Button btnType="black">Shop Now</Button>
-              </p>
-            </div>
-          </div>
-          <div className={classes.slideWrap}>
-            <div className={`${classes.slide2} ${classes.slide}`}>
-              <div className={classes.sliderContent}>
-                <div className={classes.heading}>
-                  <h1>Our Fave Tees</h1>
-                </div>
-                <div className={classes.content}>
-                  <p className={classes.description}>Shop all of our favorites.</p>
-                  <p style={{textAlign: "left"}}>
-                    <Button btnType="black">Shop Now</Button>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className={classes.mobileContent}>
-              <div className={classes.heading}>
-                  <h1>Our Fave Tees</h1>
-              </div>
-              <p className={classes.mobileDescription}>Shop all of our favorites</p>
-              <p style={{textAlign: "center"}}>
-                <Button btnType="black">Shop Now</Button>
-              </p>
-            </div>
-          </div>
-          <div className={classes.slideWrap}>
-            <div className={`${classes.slide3} ${classes.slide}`}>
-              <div className={classes.sliderContent}>
-                <div className={classes.heading}>
-                  <h1>Men's Tees</h1>
-                </div>
-                <div className={classes.content}>
-                  <p className={classes.description}>Find the perferct shirt.</p>
-                  <p style={{textAlign: "left"}}>
-                    <Button btnType="black">Shop Now</Button>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className={classes.mobileContent}>
-              <div className={classes.heading}>
-                  <h1>Men's Tees</h1>
-              </div>
-              <p className={classes.mobileDescription}>Find the perferct shirt.</p>
-              <p style={{textAlign: "center"}}>
-                <Button btnType="black">Shop Now</Button>
-              </p>
-            </div>
-          </div>
+          <HeroSlide 
+            slideClass={classes.slide1}
+            heading="Shop New Arrivals"
+            description="Our coolest new items are waiting for you!" 
+          />
+          <HeroSlide 
+            slideClass={classes.slide2}
+            heading="Our Fave Tees"
+            description="Shop all of our favorites." 
+          />
+          <HeroSlide 
+            slideClass={classes.slide3}
+            heading="Men's Tees"
+            description="Find the perfect shirt." 
+          />
         </Slider>
       </div>
 
@@ -145,56 +90,22 @@ const IndexPage = () => {
 
       <div className={classes.newArrivals}>
         <h2>New Arrivals</h2>
-        <SlickSlider {...settings}>
-          <div>
-            <Link to="/"><img alt="product 1" src={productImage} /></Link>
-            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
-            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
-            <p className={classes.productPrice}>$19.99</p>
-          </div>
-          <div>
-            <Link to="/"><img alt="product 2" src={productImage} /></Link>
-            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
-            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
-            <p className={classes.productPrice}>$19.99</p>
-          </div>
-          <div>
-            <Link to="/"><img alt="product 3" src={productImage} /></Link>
-            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
-            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
-            <p className={classes.productPrice}>$19.99</p>
-          </div>
-          <div>
-            <Link to="/"><img alt="product 4" src={productImage} /></Link>
-            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
-            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
-            <p className={classes.productPrice}>$19.99</p>
-          </div>
-          <div>
-            <Link to="/"><img alt="product 5" src={productImage} /></Link>
-            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
-            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
-            <p className={classes.productPrice}>$19.99</p>
-          </div>
-          <div>
-            <Link to="/"><img alt="product 6" src={productImage} /></Link>
-            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
-            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
-            <p className={classes.productPrice}>$19.99</p>
-          </div>
-          <div>
-            <Link to="/"><img alt="product 7" src={productImage} /></Link>
-            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
-            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
-            <p className={classes.productPrice}>$19.99</p>
-          </div>
-          <div>
-            <Link to="/"><img alt="product 8" src={productImage} /></Link>
-            <p className={classes.productTitle}><Link to="/">Product Title</Link></p>
-            <p className={classes.productCat}>WOMEN'S T-SHIRT</p>
-            <p className={classes.productPrice}>$19.99</p>
-          </div>
-        </SlickSlider>
+        <ProductSlider {...settings}>
+            {/* Display the product slide 5 times. */}
+            {[
+              ...Array(5),
+            ].map((value, index) => {
+              return (
+                <ProductSlide
+                  key={index}
+                  image={productImage}
+                  title="Product Title"
+                  category="WOMEN'S T-SHIRT"
+                  price="$19.99"
+                />
+              );
+            })}
+        </ProductSlider>
       </div>
 
       <div className={classes.favTees}>
@@ -219,11 +130,11 @@ const IndexPage = () => {
         <div className={classes.container}>
           <h2>Follow Us On Instagram</h2>
           <div className={classes.instaPhotos}>
-            <Link className={classes.instaPhoto} to="/"><img alt="insta post 1" src={insta1} /></Link>
-            <Link className={classes.instaPhoto} to="/"><img alt="insta post 2" src={insta2} /></Link>
-            <Link className={classes.instaPhoto} to="/"><img alt="insta post 3" src={insta3} /></Link>
-            <Link className={classes.instaPhoto} to="/"><img alt="insta post 4" src={insta4} /></Link>
-            <Link className={classes.instaPhoto} to="/"><img alt="insta post 5" src={insta5} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="Instagram post 1" src={insta1} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="Instagram post 2" src={insta2} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="Instagram post 3" src={insta3} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="Instagram post 4" src={insta4} /></Link>
+            <Link className={classes.instaPhoto} to="/"><img alt="Instagram post 5" src={insta5} /></Link>
           </div>
         </div>
       </div>

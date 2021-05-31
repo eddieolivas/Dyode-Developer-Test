@@ -50,17 +50,17 @@
   }
   
   .slide1 {
-    background-image: url(../assets/images/hero-slide-1.jpeg);
+    background-image: url(../assets/images/hero-slide-1.webp);
     color: #10504F;
   }
   
   .slide2 {
-    background-image: url(../assets/images/hero-slide-2.jpeg);
+    background-image: url(../assets/images/hero-slide-2.webp);
     color: #fff;
   }
   
   .slide3 {
-    background-image: url(../assets/images/hero-slide-3.jpeg);
+    background-image: url(../assets/images/hero-slide-3.webp);
     background-position: top center !important;
     color: #fff;
   }
@@ -212,7 +212,7 @@
 }
 
 .favTees {
-  background: url('../assets/images/fave-tees.jpeg');
+  background: url('../assets/images/fave-tees.webp');
   background-size: cover;
   color: #fff;
   display: flex;
@@ -363,6 +363,11 @@
 
     .emailIcon {
       display: inline;
+      width: 28px;
+
+      @media screen and (min-width: 767px) {
+        width: 52px;
+      }
     }
   
     .signUpHeading {
