@@ -35,7 +35,7 @@ const IndexPage = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
           infinite: true

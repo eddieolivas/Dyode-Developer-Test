@@ -51,7 +51,12 @@
   
   .slide1 {
     background-image: url(../assets/images/hero-slide-1.webp);
+    background-position: 93% 0;
     color: #10504F;
+
+    @media screen and (min-width: 767px) {
+      background-position: top center;
+    }
   }
   
   .slide2 {
@@ -84,6 +89,8 @@
   flex-flow: row wrap;
   flex: 1 0 26%;
   justify-content: space-between;
+  margin: auto;
+  max-width: 1440px;
   padding: 1rem;
 
   @media screen and (min-width: 980px) {
@@ -165,6 +172,8 @@
 }
 
 .newArrivals {
+  margin: auto;
+  max-width: 1440px;
   padding: 4rem 2rem;
 
   .slick-slider button {

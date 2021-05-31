@@ -1,5 +1,9 @@
 # DYODE. Dev Challenges
 
+Completed Liquid answers: https://github.com/eddieospaghettio/Dyode-Developer-Test/blob/master/liquid-answers.md
+
+Live React mockup: https://eddies-dyode-developer-test.netlify.app/
+
 ## Liquid Challenge
 
 #### These questions should be answered with real world solutions in liquid
