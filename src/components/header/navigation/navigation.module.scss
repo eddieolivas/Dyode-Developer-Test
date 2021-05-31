@@ -1,26 +1,12 @@
-$browser-context: 16;
-
-@function em($pixels, $context: $browser-context) {
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
-  }
-
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  @return $pixels / $context * 1em;
-}
-
 .mainNav {
-  @media screen and (max-width: 968px) {
-    display: none;
-  }
-
   align-self: flex-end;
-  display: flex;
+  display: none;
   height: 6em;
   align-items: flex-end;
+
+  @media screen and (min-width: 968px) {
+    display: flex;
+  }
 
   ul {
     margin: 0;
@@ -28,7 +14,7 @@ $browser-context: 16;
 
     li {
       display: inline-flex;
-      font-size: em(20px);
+      font-size: 20px;
       padding: 0 2em 1.7em 2em;
       text-align: center;
       text-transform: uppercase;
@@ -56,7 +42,7 @@ $browser-context: 16;
         background: #fff;
         color: #000;
         display: none;
-        left: 15%;
+        left: 2%;
         max-width: 972px;
         position: absolute;
         text-align: left;
@@ -65,12 +51,12 @@ $browser-context: 16;
         width: 100%;
         z-index: 1;
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (min-width: 1074px) {
           left: 9%;
         }
 
-        @media screen and (max-width: 1074px) {
-          left: 2%;
+        @media screen and (min-width: 1200px) {
+          left: 15%;
         }
 
         @keyframes growDown {

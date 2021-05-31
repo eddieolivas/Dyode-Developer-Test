@@ -1,22 +1,21 @@
 .logo {
   box-sizing: border-box;
-  margin: 1.82em 0;
+  margin: 0;
+  margin-left: 20px;
   max-width: 93px;
   width: 100%;
 
   img {
-    width: 100%;
+    height: 46px;
+    width: 55.44px;
   }
 
-  @media screen and (max-width: 968px) {
+  @media screen and (min-width: 968px) {
+    margin: 1.82em 0;
     
-    margin: 0;
-    margin-left: 20px;
-    
-
     img {
-      height: 46px;
-      width: 55.44px;
+      height: unset;
+      width: 100%;
     }
   }
 }

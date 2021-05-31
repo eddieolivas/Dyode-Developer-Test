@@ -33,4 +33,4 @@ Slider.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default Slider
+export default Slider 

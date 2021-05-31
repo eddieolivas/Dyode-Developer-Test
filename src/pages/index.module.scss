@@ -16,13 +16,13 @@
     }
 
     .sliderContent {
-      display: flex;
+      display: none;
       flex-flow: column wrap;
       align-content: center;
       width: 50%;
       
-      @media screen and (max-width: 979px) {
-        display: none;
+      @media screen and (min-width: 979px) {
+        display: flex;
       }
 
       .description {
@@ -61,11 +61,8 @@
   
   .slide3 {
     background-image: url(../assets/images/hero-slide-3.jpeg);
+    background-position: top center !important;
     color: #fff;
-
-    @media screen and (max-width: 980px) {
-      background-position: top center !important;
-    }
   }
   
   .heading {
@@ -86,37 +83,42 @@
   display: flex;
   flex-flow: row wrap;
   flex: 1 0 26%;
-  justify-content: center;
-  padding: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
 
-  @media screen and (max-width: 980px) {
-    justify-content: space-between;
-    padding: 1rem;
+  @media screen and (min-width: 980px) {
+    justify-content: center;
+    padding: 2rem;
   }
 
   .categoryCard {
     background: #10504F;
-    margin-right: 20px;
-    flex-basis: 30%;
+    margin-right: 0px;
+    flex-basis: 49%;
     max-width: 435px;
     // width: 100%;
 
-    @media screen and (max-width: 980px) {
-      flex-basis: 49%;
+    &:nth-child(2) {
       margin-right: 0;
+    }
+
+    @media screen and (min-width: 980px) {
+      flex-basis: 30%;
+      margin-right: 20px;
 
       &:nth-child(2) {
-        margin-right: 0;
+        margin-right: 20px;
       }
     }    
 
     &:last-child {
-      margin-right: 0;
+      flex-basis: 100%;
+      margin-top: 10px;
+      max-width: 100%;
 
-      @media screen and (max-width: 980px) {
-        flex-basis: 100%;
-        margin-top: 10px;
-        max-width: 100%;
+      @media screen and (min-width: 980px) {
+        flex-basis: 30%;
+        margin: 0;
       }
     }
 
@@ -125,35 +127,37 @@
     }
 
     .accessoriesDesktop {
-      @media screen and (max-width: 980px) {
-        display: none;
-      }
-    }
-
-    .accessoriesMobile {
       display: none;
 
-      @media screen and (max-width: 980px) {
+      @media screen and (min-width: 980px) {
         display: block;
       }
     }
 
-    .categoryTitle {
-      padding: 1.3rem 0;
+    .accessoriesMobile {
+      display: block;
 
-      @media screen and (max-width: 767px) {
-        padding: 0.5rem 0;
+      @media screen and (min-width: 980px) {
+        display: none;
+      }
+    }
+
+    .categoryTitle {
+      padding: 0.5rem 0;
+
+      @media screen and (min-width: 767px) {
+        padding: 1.3rem 0;
       }
 
       a {
         color: #fff;
         font-family: 'Pacifico', sans-serif;
-        font-size: 40px;
+        font-size: 26px;
         text-align: center;
         text-decoration: none;
 
-        @media screen and (max-width: 767px) {
-          font-size: 26px;
+        @media screen and (min-width: 767px) {
+          font-size: 40px;
         }
       }
     }
@@ -168,11 +172,11 @@
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 26px;
     font-weight: 400;
 
-    @media screen and (max-width: 767px) {
-      font-size: 26px;
+    @media screen and (min-width: 767px) {
+      font-size: 60px;
     }
   }
 
@@ -214,14 +218,14 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  min-height: 55vh;
+  min-height: 300px;
 
-  @media screen and (max-width: 1200px) {
-    min-height: 35vh;
+  @media screen and (min-width: 800px) {
+    height: 30vh;
   }
-
-  @media screen and (max-width: 800px) {
-    min-height: 30vh;
+  
+  @media screen and (min-width: 1200px) {
+    height: 55vh;
   }
 
   .container {
@@ -233,14 +237,14 @@
 
     .favTeesContent {
       align-self: flex-start;
-      display: flex;
+      display: none;
       flex-flow: column wrap;
       padding: 3rem 2rem 0;
       max-width: 465px;
       width: 100%;
 
-      @media screen and (max-width: 800px) {
-        display: none;
+      @media screen and (min-width: 800px) {
+        display: flex;
       }
   
       h2 {
@@ -262,13 +266,13 @@
 .favTeesMobile {
   background: #EFEFEF;
   color: #10504F;
-  display: none;
+  display: flex;
   justify-content: center;
   padding: 2em 0;
   text-align: center;
 
-  @media screen and (max-width: 800px) {
-    display: flex;
+  @media screen and (min-width: 800px) {
+    display: none;
   }
 
   h2 {
@@ -287,7 +291,7 @@
 .followUs {
   display: flex;
   flex-flow: column wrap;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
 
   .container {
     display: flex;
@@ -297,12 +301,12 @@
     width: 100%;
 
     h2 {
-      font-size: 60px;
+      font-size: 26px;
       font-weight: 400;
       margin: 0 0 1.5rem 0;
 
-      @media screen and (max-width: 767px) {
-        font-size: 26px;
+      @media screen and (min-width: 767px) {
+        font-size: 60px;
       }
     }
   
@@ -316,17 +320,20 @@
       width: 100%;
   
       .instaPhoto {
-        flex-basis: 19%;
-        max-width: 248px;
-
-        
-
-        @media screen and (max-width: 980px) {
-          flex-basis: 30%;
+        flex-basis: 30%;
             
+        &:nth-child(4),
+        &:nth-child(5) {
+          display: none;
+        }        
+
+        @media screen and (min-width: 980px) {
+          flex-basis: 19%;
+          max-width: 248px;
+
           &:nth-child(4),
           &:nth-child(5) {
-            display: none;
+            display: block;
           }
         }
   
@@ -346,11 +353,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 6rem;
-
-  @media screen and (max-width: 767px) {
-    padding: 6rem 2rem;
-  }
+  padding: 6rem 2rem;
 
   .container {
     display: flex;
@@ -363,39 +366,43 @@
     }
   
     .signUpHeading {
-      font-size: 40px;
+      font-size: 26px;
       font-weight: 400;
       margin-top: 0;
       width: 100%;
 
-      @media screen and (max-width: 767px) {
-        font-size: 26px;
+      @media screen and (min-width: 767px) {
+        font-size: 40px;
       }
     }
 
     .sideBySide {
       display: flex;
+      flex-flow: column wrap;
 
-      @media screen and (max-width: 767px) {
-        flex-flow: column wrap;
+      @media screen and (min-width: 767px) {
+        flex-flow: row nowrap;
       }
 
       .signUpCopy {
-        font-size: 22px;
+        font-size: 14px;
         margin-right: 1rem;
         text-align: left;
-        width: 50%;
+        width: 100%;
 
-        @media screen and (max-width: 767px) {
-          font-size: 14px;
+        @media screen and (min-width: 767px) {
+          font-size: 22px;
+          width: 50%;
         }
       }
     
       .signUpForm {
-        width: 50%;
+        margin-top: 35px;
+        width: 100%;
 
-        @media screen and (max-width: 767px) {
-          margin-top: 35px;
+        @media screen and (min-width: 767px) {
+          margin-top: 0;
+          width: 50%;
         }
     
         form {
@@ -405,14 +412,15 @@
             height: 38px;
             border-radius: 0;
             border: none;
+            display: none;
             font-family: 'Lato', sans-serif;
             font-size: 22px;
             margin-right: 13px;
             padding: 0.5rem;
             width: 100%;
 
-            @media screen and (max-width: 767px) {
-              display: none;
+            @media screen and (min-width: 767px) {
+              display: block;
             }
       
             &::placeholder {
@@ -433,22 +441,15 @@
             font-size: 14px;
             font-weight: bold;
             height: 54px;
+            margin: auto;
             padding: 0.4rem;
             text-transform: uppercase;
             width: 140px;
 
-            @media screen and (max-width: 767px) {
-              border-radius: 0 !important;
-              margin: auto;
+            @media screen and (min-width: 767px) {
+              margin: 0;
             }
           } 
-        }
-      }
-
-      @media screen and (max-width: 767px) {
-        .signUpCopy,
-        .signUpForm {
-          width: 100%;
         }
       }
     }

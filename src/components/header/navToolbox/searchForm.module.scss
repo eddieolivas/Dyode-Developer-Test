@@ -2,22 +2,22 @@
   animation: growDown 300ms ease-in-out forwards;
   font-family: 'Lato', sans-serif;
   position: absolute;
-  right: 87px;
-  top: -7px;
-  transition: all 0.5s ease;
+  right: 20px;
+  top: 44px;
+  transition: all 0.3s ease;
   z-index: 1;
   width: 278px;
 
-  @media screen and (max-width: 1344px) {
+  @media screen and (min-width: 500px) {
+    right: 87px;
+  }
+
+  @media screen and (min-width: 968px) {
     top: 66px;
   }
 
-  @media screen and (max-width: 968px) {
-    top: 45px;
-  }
-
-  @media screen and (max-width: 500px) {
-    right: 20px;
+  @media screen and (min-width: 1344px) {
+    top: -7px;
   }
 
   @keyframes growDown {
@@ -50,6 +50,7 @@
     -webkit-appearance: none;
     background: #000;
     border: 1px solid #000;
+    border-bottom: 2px solid #000;
     border-radius: 0;
     color: #fff;
     display: block;
@@ -61,8 +62,8 @@
     transition: all 0.3s ease-in-out;
     width: 56px;
 
-    @media screen and (max-width: 767px) {
-      border-bottom: 2px solid #000;
+    @media screen and (min-width: 767px) {
+      border: 1px solid #000;
     }
 
     &:hover {

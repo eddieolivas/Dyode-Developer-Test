@@ -1,18 +1,42 @@
 .sideDrawer {
-  position: fixed;
-  width: 90%;
-  max-width: 90%;
+  background-color: #fff;
+  box-sizing: border-box;
   height: 100%;
   left: 0;
+  padding: 0 16px;
+  position: fixed;
+  max-width: 400px;
   top: 0;
-  z-index: 200;
-  background-color: #fff;
-  padding: 32px 16px;
-  box-sizing: border-box;
   transition: transform 0.3s ease-out;
+  width: 90%;
+  z-index: 200;
 
   img {
     width: 248px;
+  }
+
+  .sideDrawerTop {
+    border-bottom: 1px solid #f1f1ef;
+    padding: 9.5px 0;
+    text-align: right;
+
+    img {
+      height: 28px;
+      width: 28px;
+    }
+  }
+
+  .sideDrawerNav {
+    color: #000;
+  }
+
+  .sideDrawerFeature {
+    background: #EFEFEF;
+
+    img {
+      height: 129px;
+      width: 129px;
+    }
   }
 }
 

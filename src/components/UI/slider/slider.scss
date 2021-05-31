@@ -10,10 +10,10 @@
   }
 
   .slick-dots {
-    bottom: 20px !important;
+    bottom: 240px !important;
 
-    @media screen and (max-width: 980px) {
-      bottom: 240px !important;
+    @media screen and (min-width: 980px) {
+      bottom: 20px !important;
     }
   }
   
