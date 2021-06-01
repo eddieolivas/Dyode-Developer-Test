@@ -9,7 +9,7 @@ import './slider.scss';
 const Slider = ({ children }) => {
 
   let settings = {
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     infinite: true,
     speed: 700,
