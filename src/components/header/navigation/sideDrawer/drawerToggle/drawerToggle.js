@@ -1,5 +1,3 @@
-import React from 'react';
-
 import classes from './drawerToggle.module.scss';
 import hamburger from '../../../../../assets/images/hamburger-button.webp';
 
