@@ -2,7 +2,7 @@
 
 Completed Liquid answers: https://github.com/eddieospaghettio/Dyode-Developer-Test/blob/master/liquid-answers.md
 
-Live React mockup: https://eddies-dyode-developer-test.netlify.app/
+Live React mockup: https://eddies-react-ecommerce-homepage.netlify.app/
 
 ## Liquid Challenge
 
